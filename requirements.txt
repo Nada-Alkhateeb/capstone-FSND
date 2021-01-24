@@ -28,6 +28,7 @@ Mako==1.1.4
 MarkupSafe==1.1.1
 mongoengine==0.22.1
 pep8==1.7.1
+pipdeptree==2.0.0
 pipreqs==0.4.10
 psycopg2-binary==2.8.6
 pyasn1==0.4.8
