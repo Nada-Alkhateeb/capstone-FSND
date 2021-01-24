@@ -228,11 +228,12 @@ pip install -r requirements.txt
 
 - Local Database Setup
 Once you create the database, open your terminal, navigate to the root folder, and run:
-
+```
 flask db init
 flask db migrate -m "Initial migration."
 flask db upgrade
 After running, don't forget modify 'SQLALCHEMY_DATABASE_URI' variable.
+```
 
 
 ## Running the server
