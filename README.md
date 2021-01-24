@@ -36,26 +36,28 @@ URL: https://flask-movies-deploy.herokuapp.com/
 1) GET /movies
 Can get all movies.
 Sample response output:
-{
-    "movies": [
-        {
-            "id": 2,
-            "release date": "1-5-2012",
-            "title": "Who I am"
-        },
-        {
-            "id": 3,
-            "release date": "4-6-2018",
-            "title": "Dark"
-        },
-        {
-            "id": 5,
-            "release date": "11-3-1017",
-            "title": "Up"
-        }
-    ],
-    "success": true,
-    "total": 3
+
+    {
+        "movies": [
+            {
+                "id": 2,
+                "release date": "1-5-2012",
+                "title": "Who I am"
+                },
+                {
+                    "id": 3,
+                    "release date": "4-6-2018",
+                    "title": "Dark"
+                },
+                {
+                    "id": 5,
+                    "release date": "11-3-1017",
+                    "title": "Up"
+                }
+                        ],
+                        
+        "success": true,
+        "total": 3
 }
 
 2) DELETE /movies/{id}
