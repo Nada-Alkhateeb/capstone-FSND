@@ -180,19 +180,19 @@ Sample response output:
 
 # Roles:
 - There are three different roles in the application as described below:
-    # Casting assistant
+    - Casting assistant
         Can view actors and movies
         email: test-1234-assistant@movies.com
         password: test-1234-assistant
 
-    # Casting producer
+    - Casting producer
         All permissions a Casting Assistant has and…
         Add or delete an actor from the database
         Modify actors or movies
         email: test-producer-1234@movies.com
         password: test-producer-1234
 
-    # Casting Director
+    - Casting Director
         All permissions a Casting Director has and…
         Add or delete a movie from the database
         email: test-director-1234@movies.com
