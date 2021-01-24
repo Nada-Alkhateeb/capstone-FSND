@@ -1,3 +1,4 @@
+import os
 import json
 from flask import request, _request_ctx_stack
 from functools import wraps
@@ -5,27 +6,18 @@ from jose import jwt
 from urllib.request import urlopen
 from dotenv import load_dotenv
 load_dotenv()
-import os
 
 
 AUTH0_DOMAIN = os.getenv('AUTH0_DOMAIN')
 ALGORITHMS = os.getenv('ALGORITHMS')
 API_AUDIENCE = os.getenv('API_AUDIENCE')
 CLIENT_ID = os.getenv('CLIENT_ID')
-CALL_BACK_URL= os.getenv('CALL_BACK_URL')
+CALL_BACK_URL = os.getenv('CALL_BACK_URL')
 
-
-# AUTH0_DOMAIN = 'fsnd-dom.us.auth0.com'
-# ALGORITHMS = ['RS256']
-# API_AUDIENCE = 'capstone'
-# CLIENT_ID = 'NDBBw6BIfDQQkhpKvWx294tcPNXudn72'
-# CALL_BACK_URL= 'http://127.0.0.1:5000/'
-
-
-# AuthError Exception
 '''
 AuthError Exception
 '''
+
 
 class AuthError(Exception):
     def __init__(self, error, status_code):
@@ -134,8 +126,8 @@ def verify_decode_jwt(token):
         except jwt.JWTClaimsError:
             raise AuthError({
                 'code': 'invalid_claims',
-                'description': 'Incorrect claims.'\
-                    'Please, check the audience and issuer.'
+                'description': 'Incorrect claims.'
+                'Please, check the audience and issuer.'
             }, 401)
         except Exception:
             raise AuthError({
@@ -151,6 +143,7 @@ def verify_decode_jwt(token):
 '''
 @requires_auth(permission) decorator method
 '''
+
 
 def requires_auth(permission=''):
     def requires_auth_decorator(f):

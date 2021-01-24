@@ -18,7 +18,6 @@ assistant_auth = {
 }
 
 
-
 class TestCase(unittest.TestCase):
 
     def setUp(self):
@@ -45,7 +44,7 @@ class TestCase(unittest.TestCase):
     """
 
     def test_retrive_actors(self):
-        res = self.client().get('/actors', headers= assistant_auth)
+        res = self.client().get('/actors', headers=assistant_auth)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -108,7 +107,7 @@ class TestCase(unittest.TestCase):
             "age": '22',
             "gender": 'F'
         }
-        res = self.client().post('/actors', headers=producer_auth,json=actor)
+        res = self.client().post('/actors', headers=producer_auth, json=actor)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
@@ -121,7 +120,7 @@ class TestCase(unittest.TestCase):
             "age": '22'
         }
 
-        res = self.client().post('/actors', headers=producer_auth,json=actor)
+        res = self.client().post('/actors', headers=producer_auth, json=actor)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 400)
@@ -143,12 +142,12 @@ class TestCase(unittest.TestCase):
         movie = {
             "title": 'Up'
         }
-        res = self.client().post('/movies', headers=producer_auth,json=movie)
+        res = self.client().post('/movies', headers=producer_auth, json=movie)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 400)
         self.assertEqual(data['success'], False)
-        
+
     def test_patch_actors(self):
         actor = {"name": "Jo"}
         res = self.client().patch('/actors/1', headers=producer_auth,
@@ -160,7 +159,7 @@ class TestCase(unittest.TestCase):
         self.assertTrue(data['actor'])
 
     def test_patch_actors_failure(self):
-        actor = { "name": "Jo"}
+        actor = {"name": "Jo"}
         res = self.client().patch('/actors/1', json=actor)
         data = json.loads(res.data)
 
@@ -186,4 +185,3 @@ class TestCase(unittest.TestCase):
 # Make the tests conveniently executable
 if __name__ == "__main__":
     unittest.main()
-

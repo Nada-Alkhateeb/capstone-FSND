@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 from dotenv import load_dotenv
 load_dotenv()
-import os
 
 database_path = os.getenv('DATABASE_URL')
 db = SQLAlchemy()
@@ -16,7 +15,6 @@ def setup_db(app, database_path=database_path):
     db.app = app
     db.init_app(app)
     db.create_all()
-
 
 
 class movies(db.Model):
