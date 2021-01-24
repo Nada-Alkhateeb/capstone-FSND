@@ -36,7 +36,7 @@ URL: https://flask-movies-deploy.herokuapp.com/
 1) GET /movies
 Can get all movies.
 Sample response output:
-
+```
     {
         "movies": [
             {
@@ -54,24 +54,26 @@ Sample response output:
                     "release date": "11-3-1017",
                     "title": "Up"
                 }
-                        ],
-                        
+                        ],                 
         "success": true,
         "total": 3
 }
+```
 
 2) DELETE /movies/{id}
 Delete movie by id.
 Sample response output:
-
+```
 {
     "delete": 5,
     "success": true
 }
+```
 
 3) POST /movies
 Add one movie to the database.
 Sample response output:
+```
 {
     "movies": [
         {
@@ -82,10 +84,12 @@ Sample response output:
     ],
     "success": true
 }
+```
 
 4) PATCH /movies/{id}
 Make changes to an exsting movie by id.
 Sample response output:
+```
 {
     "movie": {
         "id": 7,
@@ -94,10 +98,12 @@ Sample response output:
     },
     "success": true
 }
+```
 
 5) GET /actors
 Can get all actors.
 Sample response output:
+```
 {
     "actors": [
         {
@@ -116,19 +122,23 @@ Sample response output:
     "success": true,
     "total": 2
 }
+```
 
 6) DELETE /actors/{id}
 Delete actor by id.
 Sample response output:
+```
 
 {
     "delete": 1,
     "success": true
 }
+```
 
 7) POST /actors
 Add one actor to the database.
 Sample response output:
+```
 {
     "actor": [
         {
@@ -140,10 +150,12 @@ Sample response output:
     ],
     "success": true
 }
+```
 
 8) PATCH /actors/{id}
 Make changes to an exsting actor by id.
 Sample response output:
+```
 {
     "actor": {
         "age": "24",
@@ -153,13 +165,16 @@ Sample response output:
     },
     "success": true
 }
+```
 
 9)GET /auth
 Get the URl to log in.
 Sample response output:
+```
 {
     "auth_url": "https://fsnd-dom.us.auth0.com/authorize?audience=capstone&response_type=token&client_id=NDBBw6BIfDQQkhpKvWx294tcPNXudn72&redirect_uri=http://flask-movies-deploy.herokuapp.com/"
 }
+```
 
 
 
