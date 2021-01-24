@@ -182,8 +182,8 @@ Sample response output:
 - There are three different roles in the application as described below:
     # Casting assistant
         Can view actors and movies
-        email: test-assistant-1234@movies.com
-        password: test-assistant-1234
+        email: test-1234-assistant@movies.com
+        password: test-1234-assistant
 
     # Casting producer
         All permissions a Casting Assistant has and…
